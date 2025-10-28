@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Frontpage />}/>
-          <Route path='/auth' element={<Authpage />}/>
+          <Route path='/authpage' element={<Authpage />}/>
         </Routes>
       </BrowserRouter>
     </>
