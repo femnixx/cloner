@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Authpage = ( ) => {
     const [showLogin, setShowLogin] = useState(true);
@@ -22,12 +23,20 @@ const Authpage = ( ) => {
                         <input type="email" placeholder='email@exmaple.com' className='border'/>
                         <input type="password" placeholder='password' className='border'/>
                         <button className='border'>Sign In</button>
+                        <div className='flex gap-x-1'>
+                            <p>Don't Have An Account?</p>
+                            <Link to="/authpage" state={{ mode: "signup"}} className='underline'>Sign Up</Link>
+                        </div>
                     </div>
                     <div className={`flex flex-col w-full gap-y-3 justify-center items-center ${showLogin ? "hidden" : ""}`}>
                         <p>sign up</p>
                         <input type="email" placeholder='email@exmaple.com' className='border'/>
                         <input type="password" placeholder='password' className='border'/>
                         <button className='border'>Sign Up</button>
+                        <div>
+                            <p>Already Have An Account?</p>
+                            <Link to="/authpage" state={{ mode: "login"}} className='underline'>Sign In</Link>
+                        </div>
                     </div>
                 </div>
             </div>
