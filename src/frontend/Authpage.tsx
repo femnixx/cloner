@@ -22,7 +22,7 @@ const Authpage = ( ) => {
                         <p>sign in</p>
                         <input type="email" placeholder='email@exmaple.com' className='border'/>
                         <input type="password" placeholder='password' className='border'/>
-                        <button className='border'>Sign In</button>
+                        <button className='border cursor-pointer'>Sign In</button>
                         <div className='flex gap-x-1'>
                             <p>Don't Have An Account?</p>
                             <Link to="/authpage" state={{ mode: "signup"}} className='underline'>Sign Up</Link>
@@ -30,6 +30,7 @@ const Authpage = ( ) => {
                     </div>
                     <div className={`flex flex-col w-full gap-y-3 justify-center items-center ${showLogin ? "hidden" : ""}`}>
                         <p>sign up</p>
+                        <input type="text" placeholder='username' className='border'/>
                         <input type="email" placeholder='email@exmaple.com' className='border'/>
                         <input type="password" placeholder='password' className='border'/>
                         <button className='border'>Sign Up</button>
